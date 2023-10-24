@@ -11,8 +11,8 @@ SSR plus+, 蒲公英智能组网,Adblank,全能推送,动态DDNS, QOS Nftables, 
 syncthing同步工具, USB打印服务器, Rclone, Samba网络共享, 挂载 SMB/CIFS 网络共享文件夹, FTP服务器\
 **VPN**\
 N2N VPN, IPSec VPN 服务器\
-**网络**\ 
-Socat, urbo ACC 网络加速, 多线多拨, NWAN3负载均衡\
+**网络**\
+Socat, turbo ACC 网络加速, 多线多拨, NWAN3负载均衡
 
 *************************************************
 **支持IPV6,包含FRR网络工具,Strongswan mini,WireGuard。**
