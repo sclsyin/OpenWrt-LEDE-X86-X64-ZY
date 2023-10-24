@@ -1,4 +1,4 @@
-## 基于Openwrt Lede源码以P3TERX的自动编译(每月更新一次)。适用于X86-64平台，固件空间2.3G。
+**基于Openwrt Lede源码以P3TERX的自动编译(每月更新一次)。适用于X86-64平台，固件空间2.3G。**\
 **集成以下插件:**
 ---
 **系统**\
@@ -15,5 +15,5 @@ N2N VPN, IPSec VPN 服务器\
 Socat, urbo ACC 网络加速, 多线多拨, NWAN3负载均衡\
 
 ---
-### 支持IPV6,包含FRR网络工具,Strongswan mini,WireGuard。
+**支持IPV6,包含FRR网络工具,Strongswan mini,WireGuard。**
 
