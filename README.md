@@ -4,7 +4,7 @@
 **系统**\
 Diskman,文件传输\
 **服务**\
-SSR plus+, 蒲公英智能组网,Adblank,全能推送,动态DDNS, QOS Nftables, 网络唤醒, KMS服务器, uPnP, OpenVPN, 蒲公英内网穿透, NWAN3w分流助手\
+SSR plus+, 蒲公英智能组网,Adblock,全能推送,动态DDNS, QOS Nftables, 网络唤醒, KMS服务器, uPnP, OpenVPN, 蒲公英内网穿透, NWAN3w分流助手\
 **管控**\
 上网时间控制, 访问控制, 网址过滤, 定时唤醒\
 **网络存储**\
