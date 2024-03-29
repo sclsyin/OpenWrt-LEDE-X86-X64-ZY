@@ -8,7 +8,7 @@ SSR plus+, 蒲公英智能组网,Adblock,全能推送,动态DDNS, QOS Nftables, 
 **管控**\
 上网时间控制, 访问控制, 网址过滤, 定时唤醒\
 **网络存储**\
-syncthing同步工具, USB打印服务器, Rclone, Samba网络共享, 挂载 SMB/CIFS 网络共享文件夹, FTP服务器\
+USB打印服务器, Rclone, Samba网络共享, 挂载 SMB/CIFS 网络共享文件夹, FTP服务器\
 **VPN**\
 N2N VPN, IPSec VPN 服务器\
 **网络**\
