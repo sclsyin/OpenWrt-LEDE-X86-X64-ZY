@@ -68,7 +68,7 @@ jobs:
         echo "=============================================================================="
 
     - name: Checkout
-      uses: actions/checkout@main
+      uses: sclsyin/checkout@main
 
     - name: Initialization environment
       env:
