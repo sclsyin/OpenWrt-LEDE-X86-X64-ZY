@@ -18,4 +18,3 @@
 
 #修改主机名
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
-0 条关于提交的评论decaa5c
