@@ -17,6 +17,7 @@
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # sed -i 's/Bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 # sed -i 's/Bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
+# sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase="/luci-static/argon"' `find package -type f -path '*/default-settings/files/zzz-default-settings'`
 
 
 # Modify hostname
