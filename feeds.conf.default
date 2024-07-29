@@ -1,6 +1,6 @@
 src-git packages https://github.com/sclsyin/packages
 src-git luci https://github.com/sclsyin/luci
 src-git routing https://github.com/sclsyin/routing
-src-git telephony https://git.openwrt.org/feed/telephony.git
+src-git telephony https://github.com/openwrt/telephony.git;openwrt-23.05
 src-git helloworld https://github.com/sclsyin/helloworld.git
 src-git lienol https://github.com/sclsyin/openwrt-package.git
