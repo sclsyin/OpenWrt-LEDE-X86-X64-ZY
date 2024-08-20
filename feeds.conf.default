@@ -4,3 +4,4 @@ src-git routing https://github.com/sclsyin/routing
 src-git telephony https://github.com/sclsyin/telephony.git;openwrt-23.05
 src-git helloworld https://github.com/sclsyin/helloworld.git
 src-git lienol https://github.com/sclsyin/openwrt-package.git
+src-git passwall2 https://github.com/sclsyin/openwrt-passwall2.git;main
