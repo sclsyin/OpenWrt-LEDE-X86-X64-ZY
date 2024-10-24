@@ -68,7 +68,7 @@ jobs:
       uses: sclsyin/maximize-build-space@master
       with: 
         root-reserve-mb: 2048
-        swap-size-mb: 1
+        swap-size-mb: 1024
         remove-dotnet: 'true'
         remove-android: 'true'
         remove-haskell: 'true'
@@ -108,6 +108,16 @@ jobs:
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
+        cd openwrt
+        echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
+        COMMIT_AUTHOR=$(git show -s --date=short --format="作者: %an")
+        echo "COMMIT_AUTHOR=$COMMIT_AUTHOR" >> $GITHUB_ENV
+        COMMIT_DATE=$(git show -s --date=short --format="时间: %ci")
+        echo "COMMIT_DATE=$COMMIT_DATE" >> $GITHUB_ENV
+        COMMIT_MESSAGE=$(git show -s --date=short --format="内容: %s")
+        echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+        COMMIT_HASH=$(git show -s --date=short --format="hash: %H")
+        echo "COMMIT_HASH=$COMMIT_HASH" >> $GITHUB_ENV
 
     - name: Load custom feeds
       run: |
@@ -168,6 +178,7 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
+        echo "KERNEL=$(cat *.manifest | grep ^kernel | cut -d- -f2 | tr -d ' ')" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware directory
@@ -193,7 +204,15 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
+        body: |
+          **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
+          ### 📒 固件信息
+          - 💻 平台架构: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
+          - ⚽ 固件源码: ${{ env.REPO_URL }}
+          - 💝 源码分支: ${{ env.REPO_BRANCH }}
+          - 🚀 内核版本: ${{ env.KERNEL }}
+          - 🌐 默认地址: 192.168.1.1
+          - 🔑 默认密码: password
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
