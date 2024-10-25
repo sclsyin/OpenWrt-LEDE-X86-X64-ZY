@@ -1,4 +1,4 @@
-name: Build X86_64 Version OpenWrt ZY Version
+name: Build X86_64 Version OpenWrt ZY Backup
 
 on:
   repository_dispatch:
